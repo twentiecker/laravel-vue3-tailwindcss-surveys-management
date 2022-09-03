@@ -50,6 +50,23 @@
       </button>
     </div>
   </div>
+  <div class="grid gap-3 grid-cols-12">
+    <div class="mt-3 col-span-9">
+      <label
+        :for="'question_text' + model.data"
+        class="block text-sm font-medium text-gray-700"
+        >Question Text</label
+      >
+      <input
+        type="text"
+        :name="'question_text' + model.data"
+        v-model="model.question"
+        @change="datachange"
+        :id="'question_text' + model.data"
+        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+      />
+    </div>
+  </div>
 </template>
 
 <script setup>
