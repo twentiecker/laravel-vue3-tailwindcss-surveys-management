@@ -228,6 +228,10 @@ function addQuestion(index) {
 
   model.value.questions.splice(index, 0, newQuestion);
 }
+
+function deleteQuestion(question) {
+  model.value.questions = model.value.questions.filter((q) => q !== question);
+}
 </script>
 
 <style lang="scss" scoped></style>
