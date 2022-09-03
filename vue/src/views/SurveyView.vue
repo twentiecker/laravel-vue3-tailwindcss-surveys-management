@@ -87,6 +87,22 @@
                 ></textarea>
               </div>
             </div>
+
+            <!-- expire date -->
+            <div>
+              <label
+                for="expire_date"
+                class="block text-sm font-medium text-gray-700"
+                >Expire Date</label
+              >
+              <input
+                type="date"
+                name="expire_date"
+                id="expire_date"
+                v-model="model.expire_date"
+                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+              />
+            </div>
           </div>
         </div>
       </form>
