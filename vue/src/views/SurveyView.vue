@@ -195,7 +195,9 @@
 import store from "../store";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
+
 import PageComponent from "../components/PageComponent.vue";
+import QuestionEditor from "../components/editor/QuestionEditor.vue";
 
 const route = useRoute();
 
