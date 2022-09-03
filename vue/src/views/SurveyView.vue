@@ -8,6 +8,9 @@
           </h1>
         </div>
       </template>
+      <pre>
+        {{ model }}
+      </pre>
       <form @submit.prevent="saveSurvey">
         <div class="shadow sm:rounded-md sm:overflow-hidden">
           <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
@@ -152,13 +155,13 @@ let model = ref({
   description: null,
   image: null,
   expire_date: null,
-  question: null,
+  questions: null,
 });
 
 if (route.params.id) {
-  model.value = store.state.surveys.find((s) => {
-    s.id === parseInt(route.params.id);
-  });
+  model.value = store.state.surveys.find(
+    (s) => s.id === parseInt(route.params.id)
+  );
 }
 </script>
 
