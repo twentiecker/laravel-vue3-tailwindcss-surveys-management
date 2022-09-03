@@ -192,6 +192,7 @@
 </template>
 
 <script setup>
+import { v4 as uuidv4 } from "uuid";
 import store from "../store";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
@@ -214,6 +215,18 @@ if (route.params.id) {
   model.value = store.state.surveys.find(
     (s) => s.id === parseInt(route.params.id)
   );
+}
+
+function addQuestion(index) {
+  const newQuestion = {
+    id: uuidv4(),
+    type: "text",
+    question: "",
+    description: null,
+    data: {},
+  };
+
+  model.value.questions.splice(index, 0, newQuestion);
 }
 </script>
 
