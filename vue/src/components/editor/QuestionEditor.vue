@@ -239,7 +239,7 @@ function addQuestion() {
   emit("addQuestion", props.index + 1);
 }
 
-function deleteQuestion(params) {
+function deleteQuestion() {
   emit("deleteQuestion", props.question);
 }
 </script>
