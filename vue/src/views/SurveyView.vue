@@ -232,6 +232,15 @@ function addQuestion(index) {
 function deleteQuestion(question) {
   model.value.questions = model.value.questions.filter((q) => q !== question);
 }
+
+function questionChange(question) {
+  model.value.questions = model.value.questions.map((q) => {
+    if (q.id === question.id) {
+      return JSON.parse(JSON.stringify(question));
+    }
+    return q;
+  });
+}
 </script>
 
 <style lang="scss" scoped></style>
