@@ -152,10 +152,28 @@
                     d="M12 4.5v15m7.5-7.5h-15"
                   />
                 </svg>
-
                 Add Question
               </button>
             </h3>
+            <div
+              v-if="!model.questions.length"
+              class="text-center text-gray-600"
+            >
+              You don't have any questions created
+            </div>
+            <div
+              v-for="(question, index) in model.questions"
+              :key="question.id"
+            >
+              <QuestionEditor
+                :question="question"
+                :index="index"
+                @change="questionChange"
+                @addQuestion="addQuestion"
+                @deleteQuestion="deleteQuestion"
+              >
+              </QuestionEditor>
+            </div>
           </div>
 
           <!-- submit button -->
@@ -187,7 +205,7 @@ let model = ref({
   description: null,
   image: null,
   expire_date: null,
-  questions: null,
+  questions: [], // dicek lagi ya
 });
 
 if (route.params.id) {
