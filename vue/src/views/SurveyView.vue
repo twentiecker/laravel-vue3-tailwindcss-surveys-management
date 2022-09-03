@@ -124,16 +124,48 @@
                 >
               </div>
             </div>
+          </div>
 
-            <!-- submit button -->
-            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+          <!-- survey fields -->
+          <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+            <h3
+              class="text-2xl font-semibold flex items-center justify-between"
+            >
+              Questions
+              <!-- add new question button -->
               <button
-                type="submit"
-                class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                type="button"
+                @click="addQuestion"
+                class="flex items-center text-sm py-1 px-4 rounded-sm text-white bg-gray-600 hover:bg-gray-700"
               >
-                Save
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4 mr-2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+
+                Add Question
               </button>
-            </div>
+            </h3>
+          </div>
+
+          <!-- submit button -->
+          <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <button
+              type="submit"
+              class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Save
+            </button>
           </div>
         </div>
       </form>
