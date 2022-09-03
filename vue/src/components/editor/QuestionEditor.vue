@@ -234,6 +234,14 @@ function dataChange() {
 
   emit("change", data);
 }
+
+function addQuestion() {
+  emit("addQuestion", props.index + 1);
+}
+
+function deleteQuestion(params) {
+  emit("deleteQuestion", props.question);
+}
 </script>
 
 <style lang="scss" scoped></style>
