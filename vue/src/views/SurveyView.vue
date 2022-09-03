@@ -207,7 +207,7 @@ let model = ref({
   description: null,
   image: null,
   expire_date: null,
-  questions: [], // dicek lagi ya
+  questions: [],
 });
 
 if (route.params.id) {
